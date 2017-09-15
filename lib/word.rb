@@ -20,4 +20,5 @@ class Word
   def self.clear()
     @@dictionary = []
   end
+  
 end
