@@ -31,7 +31,6 @@ end
 get('/output') do
   @input_word = params.fetch('input_word')
   @input_def1 = params.fetch('input_def1')
-  # @word = Word.new(@input_word, @input_def1)
   erb(:output)
 end
 
