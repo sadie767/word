@@ -2,14 +2,22 @@ class Word
 
   @@dictionary = []
 
-  def initialize(input_word, input_def1, input_def2)
+  attr_accessor(:input_word, :input_def1)
+
+  def initialize(input_word, input_def1)
     @input_word = input_word
     @input_def1 = input_def1
-    @input_def2 = input_def2
   end
 
-  def self.view
+  def self.view()
     @@dictionary
   end
 
+  def save()
+    @@dictionary.push(self)
+  end
+
+  def self.clear()
+    @@dictionary = []
+  end
 end
