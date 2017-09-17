@@ -19,10 +19,6 @@
       @@dictionary.push(self)
     end
 
-    # def self.clear()
-    #   @@dictionary = []
-    # end
-
     def self.find(id)
     item_id = id.to_i()
     @@dictionary.each do |item|
@@ -32,15 +28,3 @@
     end
   end
   end
-
-  # class Definition
-  #   attr_accessor(:input_def2)
-  #
-  #   def initialize(input_def2)
-  #     @input_def2 = input_def2
-  #   end
-  #
-  #   def display()
-  #     @input_def2
-  #   end
-  # end
