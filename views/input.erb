@@ -5,9 +5,12 @@
   <li><a href='http://localhost:4567/def3'>Japanese Spider Crab</a></li>
   <li><a href='http://localhost:4567/def4'>Naked Mole Rat</a></li>
   <li><a href='http://localhost:4567/def5'>Thorny Dragon</a></li>
-</ul>
+  <% @list_input.each do |new_input| %>
+<li><a href="/strange_def1/<%= new_input.id %>"><%= new_input.input_word %></a></li>
+<% end %>
+<ul>
 <h2>Add some more strange animals!</h2>
-<form action="/output">
+<form action="/" method="post">
   <div class="form-group">
     <label for="input_word">Input an animal:</label>
     <input name="input_word" class="form-control" type="text">
