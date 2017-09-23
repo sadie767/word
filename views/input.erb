@@ -1,10 +1,10 @@
 <h1>Strange animal dictionary:</h1>
 <ul>
-  <li><a href='http://localhost:4567/def1'>Aardvark</a></li>
-  <li><a href='http://localhost:4567/def2'>Giant Isopod</a></li>
-  <li><a href='http://localhost:4567/def3'>Japanese Spider Crab</a></li>
-  <li><a href='http://localhost:4567/def4'>Naked Mole Rat</a></li>
-  <li><a href='http://localhost:4567/def5'>Thorny Dragon</a></li>
+  <li><a href='/def1'>Aardvark</a></li>
+  <li><a href='/def2'>Giant Isopod</a></li>
+  <li><a href='/def3'>Japanese Spider Crab</a></li>
+  <li><a href='/def4'>Naked Mole Rat</a></li>
+  <li><a href='/def5'>Thorny Dragon</a></li>
   <% @list_input.each do |new_input| %>
 <li><a href="/strange_def1/<%= new_input.id %>"><%= new_input.input_word %></a></li>
 <% end %>
