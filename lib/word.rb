@@ -2,11 +2,12 @@
     @@dictionary = []
 
     attr_reader :id
-    attr_accessor(:input_word, :input_def1)
+    attr_accessor :input_word, :input_def1, :definitions
 
     def initialize(attributes)
       @input_word = attributes.fetch(:input_word)
       @input_def1 = attributes.fetch(:input_def1)
+      @definitions = []
       @id = @@dictionary.length + 1
     end
 
@@ -28,7 +29,7 @@
     end
 
     def add_def(input_def2)
-      @@dictionary.push(input_def2)
+      @definitions.push(input_def2)
     end
 
     def delete()

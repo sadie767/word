@@ -1,14 +1,16 @@
 <h1>Your Strange Animal</h1>
 <br>
-<h3><%= @new_id.input_word %></h3>
-<h2><%= @new_id.input_def1 %></h2>
-<h2><%= @input_def2 %></h2>
+<h3><%= @word.input_word %></h3>
+<h2><%= @word.input_def1 %></h2>
+<h2><%= @word.input_def2 %></h2>
 <br><br>
 <h2>Add another animal definition!</h2>
-<form action="/output" method="post">
+<form action="/add_comment/<%= @word.id %>" method="post">
   <div class="form-group">
     <label for="input_def2">Definition:</label>
     <input name="input_def2" class="form-control" type="text">
   </div>
   <button type='submit'>Add New Definition</button>
 </form>
+
+<a href='/'>Return home</a>
