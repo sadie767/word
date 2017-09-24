@@ -36,4 +36,8 @@
       @@dictionary = []
     end
 
+    def show_def
+      @definitions
+    end
+
   end

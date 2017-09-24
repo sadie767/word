@@ -9,12 +9,6 @@ get('/') do
   erb(:input)
 end
 
-get('/output') do
-  @list_input = Word.view()
-  erb(:output)
-end
-
-
 post ('/') do
   @strange_animal = params['input_word']
   @strange_def1 = params['input_def1']
@@ -24,11 +18,17 @@ post ('/') do
   erb(:input)
 end
 
+get('/strange_def1/:id') do
+  @word = Word.find(params[:id])
+  @list_input = Word.view()
+  erb(:output)
+end
+
 post ('/add_comment/:id') do
   @strange_def2 = params['input_def2']
   @word = Word.find(params[:id])
   @word.add_def(@strange_def2)
-  @word.save
+  @word.show_def
   erb(:output)
 end
 
@@ -50,16 +50,4 @@ end
 
 get('/def5') do
   erb(:def5)
-end
-
-get('/strange_def1/:id') do
-  @word = Word.find(params[:id])
-  @list_input = Word.view()
-  erb(:output)
-end
-
-post('/definition/:id') do
-  @word = Word.find(params[:id])
-  @word.add_def(params['strange_def2'])
-  erb(:output)
 end

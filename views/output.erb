@@ -2,7 +2,9 @@
 <br>
 <h3><%= @word.input_word %></h3>
 <h2><%= @word.input_def1 %></h2>
-<h2><%= @word.input_def2 %></h2>
+<% @word.show_def.each do |input| %>
+<h2><%= input %></h2>
+<% end %>
 <br><br>
 <h2>Add another animal definition!</h2>
 <form action="/add_comment/<%= @word.id %>" method="post">

@@ -49,4 +49,13 @@ describe('Word') do
       expect(new_input4.delete).to(eq([]))
     end
   end
+
+  describe('#show_def') do
+    it('show multiple definitions of one word') do
+    new_input3 = Word.new({:input_word=> "platypus", :input_def1=> "beaked quadruped", :definitions=> []})
+    new_input3.add_def('web footed')
+    expect(new_input3.show_def()).to(eq(['web footed']))
+    end
+  end
+
 end
