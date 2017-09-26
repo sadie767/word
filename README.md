@@ -15,6 +15,7 @@ _Users will be able to add strange animals that they discover to a list of stran
 * _open project by using the command ruby app.rb in the terminal_
 * _copy and past url using http://localhost:4567 _
 * _type in your own strange animal and it's definition_
+* _you can also check out the app on the web at https://pacific-sierra-90450.herokuapp.com/ _
 
 ## Known Bugs
 

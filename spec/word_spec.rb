@@ -57,5 +57,4 @@ describe('Word') do
     expect(new_input3.show_def()).to(eq(['web footed']))
     end
   end
-
 end
